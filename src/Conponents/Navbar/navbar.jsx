@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import './navbar.css';
-import { Link } from 'react-scroll';
-import logo from '../../assets/logo.png';
-import messege from '../../assets/messege.png';
+import React, { useState } from "react";
+import "./navbar.css";
+import { Link } from "react-scroll";
+import logo from "../../assets/logo.png";
+import messege from "../../assets/messege.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,18 +12,17 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='navbar'>
-      <div className='navbarContent'>
-        {/* Logo */}
-        <img src={logo} alt="logo" className='logo' />
+    <nav className="navbar">
+      <div className="navbarContent">
+        <img src={logo} alt="logo" className="logo" />
 
         {/* Desktop Menu */}
-        <div className={`desktopMenu ${isMenuOpen ? 'active' : ''}`}>
+        <div className={`desktopMenu ${isMenuOpen ? "active" : ""}`}>
           <Link
             to="home"
             smooth={true}
             duration={500}
-            className='desktopMenuListItem'
+            className="desktopMenuListItem"
             activeClass="active"
           >
             Home
@@ -32,7 +31,7 @@ const Navbar = () => {
             to="about"
             smooth={true}
             duration={500}
-            className='desktopMenuListItem'
+            className="desktopMenuListItem"
             activeClass="active"
           >
             About
@@ -41,7 +40,7 @@ const Navbar = () => {
             to="projects"
             smooth={true}
             duration={500}
-            className='desktopMenuListItem'
+            className="desktopMenuListItem"
             activeClass="active"
           >
             Projects
@@ -50,7 +49,7 @@ const Navbar = () => {
             to="services"
             smooth={true}
             duration={500}
-            className='desktopMenuListItem'
+            className="desktopMenuListItem"
             activeClass="active"
           >
             Services
@@ -58,14 +57,14 @@ const Navbar = () => {
         </div>
 
         {/* Contact Button */}
-        <button className='desktopmenuBtn'>
-          <img src={messege} alt="messege" className='desktopmenuimg' />
+        <button className="desktopmenuBtn">
+          <img src={messege} alt="messege" className="desktopmenuimg" />
           Contact Me
         </button>
 
         {/* Hamburger Menu for Mobile */}
-        <div className='hamburgerMenu' onClick={toggleMenu}>
-          <div className={`hamburgerIcon ${isMenuOpen ? 'open' : ''}`}>
+        <div className="hamburgerMenu" onClick={toggleMenu}>
+          <div className={`hamburgerIcon ${isMenuOpen ? "open" : ""}`}>
             <span></span>
             <span></span>
             <span></span>
