@@ -6,17 +6,15 @@ import messege from "../../assets/messege.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  console.log("Navbar rendered");
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" style={{ position: "fixed", top: 0 }}>
       <div className="navbarContent">
         <img src={logo} alt="logo" className="logo" />
-
-        {/* Desktop Menu */}
         <div className={`desktopMenu ${isMenuOpen ? "active" : ""}`}>
           <Link
             to="home"
@@ -56,13 +54,11 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Contact Button */}
-        <button className="desktopmenuBtn">
+        <button className="contactmeBtn">
           <img src={messege} alt="messege" className="desktopmenuimg" />
           Contact Me
         </button>
 
-        {/* Hamburger Menu for Mobile */}
         <div className="hamburgerMenu" onClick={toggleMenu}>
           <div className={`hamburgerIcon ${isMenuOpen ? "open" : ""}`}>
             <span></span>
